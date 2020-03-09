@@ -36,12 +36,12 @@ class Header extends Component {
         const { auth } = this.props;
         return (
             <nav>
-                <div className='nav-wrapper'>
+                <div className='nav-wrapper purple darken-4'>
                     <Link
                         to={auth ? '/surveys' : '/'}
                         className='brand-logo left'
                         style={{ marginLeft: '11px' }}>
-                        eMaily
+                        Emaily
                     </Link>
                     <ul id='nav-mobile' className='right'>
                         {this.renderContent()}

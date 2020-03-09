@@ -9,6 +9,7 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
     googleId: String,
     credits: { type: Number, default: 0 },
+    name: String,
 });
 
 // two arguments means loading schema into mongoose

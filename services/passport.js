@@ -39,7 +39,10 @@ passport.use(
             // existingUser is null,
             // create as new instance of the Model Class
             // and save it to the db (create a new Model instance)
-            const user = await new User({ googleId: profile.id }).save();
+            const user = await new User({
+                googleId: profile.id,
+                name: profile.displayName,
+            }).save();
             done(null, user);
         }
     )
