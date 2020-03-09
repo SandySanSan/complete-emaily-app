@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import StripeBilling from './StripeBilling';
 
 class Header extends Component {
     renderContent() {
-        switch (this.props.auth) {
+        const { auth } = this.props;
+        switch (auth) {
             case null:
                 return;
             case false:
@@ -15,9 +17,17 @@ class Header extends Component {
                 );
             default:
                 return (
-                    <li>
-                        <a href='/api/logout'>Logout</a>
-                    </li>
+                    <Fragment>
+                        <li>
+                            <StripeBilling />
+                        </li>
+                        <li style={{ margin: '0 10px' }}>
+                            Credits : {auth.credits}
+                        </li>
+                        <li>
+                            <a href='/api/logout'>Logout</a>
+                        </li>
+                    </Fragment>
                 );
         }
     }
@@ -29,11 +39,11 @@ class Header extends Component {
                 <div className='nav-wrapper'>
                     <Link
                         to={auth ? '/surveys' : '/'}
-                        className='brand-logo'
+                        className='brand-logo left'
                         style={{ marginLeft: '11px' }}>
                         eMaily
                     </Link>
-                    <ul id='nav-mobile' className='right hide-on-med-and-down'>
+                    <ul id='nav-mobile' className='right'>
                         {this.renderContent()}
                     </ul>
                 </div>
