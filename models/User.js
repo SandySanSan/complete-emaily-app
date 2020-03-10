@@ -1,10 +1,5 @@
 const mongoose = require('mongoose');
-// const Schema = mongoose.Schema
-// destructuring
-const { Schema } = mongoose;
-// mongoose has to know the properties of the collection
-// the schema object creates a schema for a new collection
-// and describes properties
+const { Schema } = mongoose; // destructuring mongoose
 
 const userSchema = new Schema({
     googleId: String,
@@ -12,5 +7,4 @@ const userSchema = new Schema({
     name: String,
 });
 
-// two arguments means loading schema into mongoose
-mongoose.model('users', userSchema);
+mongoose.model('users', userSchema); // loading schema into mongoose

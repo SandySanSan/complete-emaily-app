@@ -5,6 +5,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI, {
@@ -14,15 +15,15 @@ mongoose.connect(keys.mongoURI, {
 
 const app = express();
 
-// use() refers to middlewares (small functions that modify the incoming requests before they are sent off to route handlers)
+/**
+ * use() refers to middlewares
+ */
 
-// parses the request (post, patch, put) and assigns it to req.body property of the incoming request object
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // parses the request and assigns it to req.body property of the incoming request object
 
 app.use(
     cookieSession({
-        // thirty days in ms
-        maxAge: 30 * 24 * 60 * 60 * 1000,
+        maxAge: 30 * 24 * 60 * 60 * 1000, // thirty days in ms
         keys: [keys.cookieKey],
     })
 );
@@ -31,20 +32,18 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app); // IIFE
-require('./routes/billingRoutes')(app); // IIFE
+require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 // env variable automatically set by Heroku
 if (process.env.NODE_ENV === 'production') {
-    // Express will serve up production assets like main.js or main.css
-    app.use(express.static('client/build'));
+    app.use(express.static('client/build')); // Express will serve up production assets like main.js or main.css
 
-    // Express will serve up index.html if it doesn't recognize the route
-    const path = require('path');
+    const path = require('path'); // Express will serve up index.html if it doesn't recognize the route
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
 
-// dynamic Port binding for Heroku
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000; // dynamic Port binding for Heroku
 app.listen(PORT);

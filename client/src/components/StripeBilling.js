@@ -7,13 +7,15 @@ class StripeBilling extends Component {
     render() {
         return (
             <StripeCheckout
-                amount={500}
+                amount={500} // Amount on cents
                 token={token => this.props.handleStripeToken(token)}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
-                name='eMaily' // title of pop-in
-                description='Add credits to your account' // the pop-in header subtitle
+                name='eMaily' // Title of pop-in
+                description='Add credits to your account.' // Pop-in header subtitle
             >
-                <button className='btn'>ADD CREDITS</button>
+                <button className='btn-small deep-purple accent-2'>
+                    ADD CREDITS
+                </button>
             </StripeCheckout>
         );
     }

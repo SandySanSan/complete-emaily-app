@@ -12,19 +12,20 @@ module.exports = app => {
         '/auth/google/callback',
         passport.authenticate('google'),
         (req, res) => {
-            // the res object has a function redirect attached to it
-            res.redirect('/surveys');
+            res.redirect('/surveys'); // Function attached to res object
         }
     );
 
     app.get('/api/logout', (req, res) => {
-        // logout() is attached automatically to the req object by passport
-        // takes the cookie that contains the user's id and kills the id that's in there
-        req.logout();
+        req.logout(); // Function attached to res object
         res.redirect('/');
     });
-    // req > incoming request
-    // res > outgoing response
+
+    /**
+     * req > incoming request
+     * res > outgoing response
+     */
+
     app.get('/api/current_user', (req, res) => {
         res.send(req.user);
     });

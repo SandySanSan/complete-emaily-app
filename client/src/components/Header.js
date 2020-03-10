@@ -6,6 +6,11 @@ import StripeBilling from './StripeBilling';
 class Header extends Component {
     renderContent() {
         const { auth } = this.props;
+
+        /**
+         * Conditionnal rendering depending on user's authentication
+         */
+
         switch (auth) {
             case null:
                 return;
@@ -18,14 +23,27 @@ class Header extends Component {
             default:
                 return (
                     <Fragment>
+                        <li
+                            style={{
+                                margin: '0 10px',
+                                fontSize: '1.3rem',
+                                fontWeight: 'bold',
+                                marginRight: '2.5rem',
+                            }}
+                            className='deep-purple-text text-accent-2'>
+                            CREDITS : {auth.credits}
+                        </li>
                         <li>
                             <StripeBilling />
                         </li>
-                        <li style={{ margin: '0 10px' }}>
-                            Credits : {auth.credits}
-                        </li>
                         <li>
-                            <a href='/api/logout'>Logout</a>
+                            <a
+                                href='/api/logout'
+                                className='btn-small deep-purple accent-1'>
+                                <i className='material-icons'>
+                                    power_settings_new
+                                </i>
+                            </a>
                         </li>
                     </Fragment>
                 );
@@ -37,21 +55,23 @@ class Header extends Component {
         return (
             <nav>
                 <div className='nav-wrapper purple darken-4'>
-                    <Link
-                        to={auth ? '/surveys' : '/'}
-                        className='brand-logo left'
-                        style={{ marginLeft: '11px' }}>
-                        Emaily
-                    </Link>
-                    <ul id='nav-mobile' className='right'>
-                        {this.renderContent()}
-                    </ul>
+                    <div className='container'>
+                        <Link
+                            to={auth ? '/surveys' : '/'}
+                            className='brand-logo left deep-purple-text text-accent-2'
+                            style={{ marginLeft: '0.8vw' }}>
+                            Emaily
+                        </Link>
+                        <ul id='nav-mobile' className='right'>
+                            {this.renderContent()}
+                        </ul>
+                    </div>
                 </div>
             </nav>
         );
     }
 }
-// destructuring state.auth
+// Destructuring state.auth
 function mapStateToProps({ auth }) {
     return { auth };
 }

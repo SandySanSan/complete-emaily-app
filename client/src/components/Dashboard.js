@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 class Dashboard extends Component {
     render() {
         const { auth } = this.props;
-        console.log();
         return (
             <div
                 className='center-align'
@@ -15,7 +14,15 @@ class Dashboard extends Component {
                     className='responsive-img'
                     alt='Dashboard Emaily'
                 />
-                <h5>Hi {auth && auth.name}! This is your dashboard.</h5>
+                <h5 className='grey-text text-darken-2'>
+                    Hi
+                    <span
+                        className='deep-purple-text text-accent-2'
+                        style={{ margin: '0 10px' }}>
+                        {auth && auth.name}
+                    </span>
+                    ! This is your dashboard.
+                </h5>
             </div>
         );
     }

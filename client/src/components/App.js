@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './Header';
 import Landing from './Landing';
 import Dashboard from './Dashboard';
+import Footer from './Footer';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
@@ -18,12 +19,13 @@ class App extends Component {
             <div className='grey lighten-3'>
                 <BrowserRouter>
                     <div
-                        className='container white'
-                        style={{ height: '100vh' }}>
+                        className='white'
+                        style={{ height: '100vh', position: 'relative' }}>
                         <Header />
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/surveys' component={Dashboard} />
                         <Route path='/surveys/new' component={SurveyNew} />
+                        <Footer />
                     </div>
                 </BrowserRouter>
             </div>

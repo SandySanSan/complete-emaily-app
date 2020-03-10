@@ -10,8 +10,14 @@ export default function Landing() {
                 className='responsive-img'
                 style={{ padding: '5px 0' }}
             />
-            <h3>- Welcome to Emaily -</h3>
-            <h5>Collect easily feedback from your users.</h5>
+            <h3 className='grey-text text-darken-2'>
+                - Welcome to{' '}
+                <span className='deep-purple-text text-accent-2'>Emaily</span> -
+            </h3>
+            <h5 className='grey-text text-darken-2'>
+                Create simple surveys and collect easily feedback from your
+                users.
+            </h5>
         </div>
     );
 }
