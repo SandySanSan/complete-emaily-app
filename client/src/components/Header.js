@@ -26,11 +26,10 @@ class Header extends Component {
                         <li
                             style={{
                                 margin: '0 10px',
-                                fontSize: '1.3rem',
-                                fontWeight: 'bold',
+                                fontSize: '1.1rem',
                                 marginRight: '2.5rem',
                             }}
-                            className='deep-purple-text text-accent-2'>
+                            className='deep-purple-text text-lighten-5'>
                             CREDITS : {auth.credits}
                         </li>
                         <li>
@@ -54,11 +53,11 @@ class Header extends Component {
         const { auth } = this.props;
         return (
             <nav>
-                <div className='nav-wrapper purple darken-4'>
+                <div className='nav-wrapper blue darken-2'>
                     <div className='container'>
                         <Link
                             to={auth ? '/surveys' : '/'}
-                            className='brand-logo left deep-purple-text text-accent-2'
+                            className='brand-logo left deep-purple-text text-lighten-5'
                             style={{ marginLeft: '0.8vw' }}>
                             Emaily
                         </Link>
