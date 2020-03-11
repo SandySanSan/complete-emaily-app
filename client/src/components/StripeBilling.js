@@ -13,9 +13,7 @@ class StripeBilling extends Component {
                 name='eMaily' // Title of pop-in
                 description='Add credits to your account.' // Pop-in header subtitle
             >
-                <button className='btn-small deep-purple accent-2'>
-                    ADD CREDITS
-                </button>
+                <button className='btn-small pink accent-2'>ADD CREDITS</button>
             </StripeCheckout>
         );
     }

@@ -38,7 +38,7 @@ class Header extends Component {
                         <li>
                             <a
                                 href='/api/logout'
-                                className='btn-small deep-purple accent-1'>
+                                className='btn-small deep-purple accent-2'>
                                 <i className='material-icons'>
                                     power_settings_new
                                 </i>
@@ -53,7 +53,7 @@ class Header extends Component {
         const { auth } = this.props;
         return (
             <nav>
-                <div className='nav-wrapper blue darken-2'>
+                <div className='nav-wrapper deep-purple accent-3'>
                     <div className='container'>
                         <Link
                             to={auth ? '/surveys' : '/'}
