@@ -38,7 +38,7 @@ class Header extends Component {
                         <li>
                             <a
                                 href='/api/logout'
-                                className='btn-small deep-purple accent-2'>
+                                className='btn-flat deep-purple accent-2 white-text'>
                                 <i className='material-icons'>
                                     power_settings_new
                                 </i>
