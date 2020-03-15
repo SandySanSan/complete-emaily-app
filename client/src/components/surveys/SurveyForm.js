@@ -7,31 +7,7 @@ import { reduxForm, Field } from 'redux-form'; // allows reduxForm to communicat
 import { Link } from 'react-router-dom';
 import SurveyField from './SurveyField';
 import validateEmails from '../../utils/validateEmails';
-
-// custom parameters of each field
-const FIELDS = [
-    {
-        label: 'Survey title',
-        name: 'title',
-        errorMessage: 'You must provide a survey title.',
-    },
-    {
-        label: 'Email subject',
-        name: 'subject',
-        errorMessage: 'You must provide a subject to your email.',
-    },
-    {
-        label: 'Email body',
-        name: 'body',
-        errorMessage: 'You must provide content to your email.',
-    },
-    {
-        label: 'Recipients list (emails separated with comma)',
-        name: 'emails',
-        errorMessage:
-            'You must provide a list of recipients (at least one email)',
-    },
-];
+import FIELDS from './formFields';
 
 class SurveyForm extends Component {
     renderFields() {
@@ -74,7 +50,7 @@ class SurveyForm extends Component {
 
 function validate(values) {
     const errors = {};
-    errors.emails = validateEmails(values.emails || '');
+    errors.recipients = validateEmails(values.recipients || '');
     FIELDS.forEach(({ name, errorMessage }) => {
         if (!values[name]) {
             errors[name] = errorMessage;

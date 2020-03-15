@@ -4,31 +4,34 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import FIELDS from './formFields';
+import { withRouter } from 'react-router-dom';
+import * as actions from '../../actions';
 
-const SurveyFormReview = ({ onCancel, formValues }) => {
+const SurveyFormReview = ({ onCancel, submitSurvey, formValues, history }) => {
+    const submitAndRedirect = async formValues => {
+        await submitSurvey(formValues);
+        await history.push('/surveys');
+    };
+
+    const fieldsReview = FIELDS.map(({ name, label }) => (
+        <div key={name}>
+            <h5>{label}</h5>
+            <p>{formValues[name]} </p>
+            <div className='divider' />
+        </div>
+    ));
     return (
         <div>
             <h5 style={{ margin: '4.5rem 0' }}>Please confirm your entries</h5>
             <div
                 className='container'
                 style={{
-                    border: '1px solid lavender',
                     height: '30rem',
-                    borderRadius: '10px',
                     padding: '15px',
                     margin: '3rem 0',
                 }}>
-                <h5>Survey title : </h5>
-                <p>{formValues.title} </p>
-                <div className='divider' />
-                <h5>Email subject : </h5>
-                <p>{formValues.subject} </p>
-                <div className='divider' />
-                <h5>Email body :</h5>
-                <p>{formValues.body} </p>
-                <div className='divider' />
-                <h5>Recipients list : </h5>
-                <p>{formValues.emails} </p>
+                {fieldsReview}
             </div>
             <button
                 className='btn-flat yellow accent-2 left black-text'
@@ -37,10 +40,17 @@ const SurveyFormReview = ({ onCancel, formValues }) => {
                 Edit survey
                 <i className='material-icons left'>arrow_back</i>
             </button>
+            <button
+                className='btn-flat teal accent-2 right black-text'
+                type='submit'
+                onClick={() => submitAndRedirect(formValues)}>
+                Send Survey
+                <i className='material-icons right'>email</i>
+            </button>
         </div>
     );
 };
 function mapStateToProps(state) {
     return { formValues: state.form.surveyForm.values };
 }
-export default connect(mapStateToProps)(SurveyFormReview);
+export default connect(mapStateToProps, actions)(withRouter(SurveyFormReview)); // withRouter passes the history object to the props
