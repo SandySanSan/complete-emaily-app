@@ -6,9 +6,8 @@ const Footer = () => {
             <div
                 className='footer-copyright deep-purple lighten-5 valign-wrapper'
                 style={{
-                    bottom: 0,
-                    position: 'absolute',
-                    width: '100vw',
+                    // bottom: 0,
+                    // position: 'absolute',
                     height: '55px',
                 }}>
                 <div className='container center-align'>

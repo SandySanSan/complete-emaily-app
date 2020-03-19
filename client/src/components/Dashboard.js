@@ -1,5 +1,6 @@
 import React from 'react';
 import imgDashboard from '../img/dashboard-emaily.png';
+import SurveyList from './surveys/SurveyList';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -24,6 +25,7 @@ const Dashboard = ({ auth }) => {
                     ! This is your dashboard.
                 </h5>
             </div>
+            <SurveyList />
             {/* Add survey button */}
             <div className='fixed-action-btn'>
                 <Link
