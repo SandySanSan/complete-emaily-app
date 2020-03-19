@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
-import surveysReducer from '../../reducers/surveysReducer';
 
 class SurveyList extends Component {
     componentDidMount() {
@@ -12,8 +11,8 @@ class SurveyList extends Component {
             <div className='container'>
                 <div className='row'>
                     {this.props.surveys.reverse().map(survey => (
-                        <div className='col s12 m6' key={survey._id}>
-                            <div className='card  green accent-2'>
+                        <div className='col s12 m12 l6' key={survey._id}>
+                            <div className='card yellow darken-1'>
                                 <div className='card-content grey-text text-darken-3'>
                                     <span className='card-title'>
                                         {survey.title}

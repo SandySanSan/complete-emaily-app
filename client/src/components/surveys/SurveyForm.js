@@ -13,10 +13,10 @@ class SurveyForm extends Component {
     renderFields() {
         return (
             <div>
-                {FIELDS.map(({ name, label }) => (
+                {FIELDS.map(({ name, label, type }) => (
                     <Field
                         key={name}
-                        type='text'
+                        type={type}
                         name={name}
                         component={SurveyField}
                         label={label}

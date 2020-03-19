@@ -6,10 +6,13 @@ import { connect } from 'react-redux';
 
 const Dashboard = ({ auth }) => {
     return (
-        <div>
+        <div style={{ paddingBottom: '75px' }}>
             <div
                 className='center-align'
-                style={{ width: '100%', padding: '10px 0' }}>
+                style={{
+                    width: '100%',
+                    padding: '10px 0',
+                }}>
                 <img
                     src={imgDashboard}
                     className='responsive-img'

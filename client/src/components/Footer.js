@@ -6,9 +6,10 @@ const Footer = () => {
             <div
                 className='footer-copyright deep-purple lighten-5 valign-wrapper'
                 style={{
-                    // bottom: 0,
-                    // position: 'absolute',
+                    bottom: 0,
                     height: '55px',
+                    width: '100%',
+                    position: 'static',
                 }}>
                 <div className='container center-align'>
                     <span className='grey-text text-darken-3'>

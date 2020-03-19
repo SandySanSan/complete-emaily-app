@@ -19,14 +19,14 @@ class App extends Component {
                 <BrowserRouter>
                     <div
                         className='white'
-                        style={{ height: '100vh', position: 'relative' }}>
+                        style={{ minHeight: '100vh', position: 'relative' }}>
                         <Header />
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/surveys' component={Dashboard} />
                         <Route path='/surveys/new' component={SurveyNew} />
-                        <Footer />
                     </div>
                 </BrowserRouter>
+                <Footer />
             </div>
         );
     }
