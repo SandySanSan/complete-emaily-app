@@ -32,7 +32,7 @@ class SurveyForm extends Component {
                 onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}
                 style={{ marginTop: '3.5rem' }}>
                 {this.renderFields()}
-                <div style={{ marginTop: '3.5rem' }}>
+                <div style={{ marginTop: '2.5rem' }}>
                     <Link to='/surveys' className='red-text'>
                         Cancel
                     </Link>

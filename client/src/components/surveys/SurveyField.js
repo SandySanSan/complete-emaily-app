@@ -9,11 +9,18 @@ const SurveyField = ({ input, type, label, meta: { error, touched } }) => {
         <div style={{ minHeight: '8rem' }}>
             <label>{label}</label>
             {type === 'textarea' ? (
-                <textarea
-                    {...input}
-                    id='textarea1'
-                    className='materialize-textarea'
-                    style={{ rows: 5 }}></textarea>
+                <div>
+                    <textarea
+                        {...input}
+                        id='textarea1'
+                        className='materialize-textarea'
+                        style={{
+                            minHeight: '10rem',
+                            border: '1px solid whitesmoke',
+                            padding: '10px',
+                            margin: '15px 0',
+                        }}></textarea>
+                </div>
             ) : (
                 <input {...input} style={{ marginBottom: '5px' }} />
             )}
