@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys, deleteSurvey } from '../../actions';
 import SurveyChart from './SurveyChart';
+import Modal from './Modal';
 
 class SurveyList extends Component {
     componentDidMount() {
@@ -30,16 +31,12 @@ class SurveyList extends Component {
                                     <h4>{survey.title}</h4>
                                 </div>
                                 <div className='col s12 m6'>
-                                    <button
-                                        className='right btn-small red darken-1'
-                                        onClick={() =>
-                                            this.handleDelete(survey._id)
-                                        }>
-                                        <i className='material-icons right'>
-                                            delete_forever
-                                        </i>
-                                        Delete
-                                    </button>
+                                    <Modal
+                                        title={survey.title}
+                                        dateSent={survey.dateSent}
+                                        handleDelete={this.handleDelete}
+                                        id={survey._id}
+                                    />
                                 </div>
                             </div>
                             <div className='card-content grey-text text-darken-3 col s12 l8'>

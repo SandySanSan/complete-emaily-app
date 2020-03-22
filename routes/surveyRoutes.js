@@ -25,7 +25,7 @@ module.exports = app => {
         const surveyToDelete = await Survey.findByIdAndDelete(
             { _id: req.params.surveyId },
             (err, data) => {
-                if (err) console.log('problemo');
+                if (err) console.log('err');
                 res.send(data._id);
             }
         );

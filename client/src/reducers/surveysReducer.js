@@ -7,9 +7,9 @@ export default function(state = [], action) {
 
         case DELETE_SURVEY:
             const newState = [...state];
-            const filterSurveys = newState.filter(
-                survey => survey._id !== action.payload
-            );
+            const filterSurveys = newState
+                .reverse()
+                .filter(survey => survey._id !== action.payload);
             return filterSurveys;
         default:
             return state;
