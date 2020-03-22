@@ -26,10 +26,11 @@ class SurveyForm extends Component {
         );
     }
     render() {
+        const { handleSubmit, onSurveySubmit } = this.props;
         return (
             <form
                 // handleSubmit is provided by redux-form
-                onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}
+                onSubmit={handleSubmit(onSurveySubmit)}
                 style={{ marginTop: '3.5rem' }}>
                 {this.renderFields()}
                 <div style={{ marginTop: '2.5rem' }}>
