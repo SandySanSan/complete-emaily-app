@@ -18,7 +18,7 @@ Create and send easily surveys with yes-no questions. Be informed when a user an
 
 ## Screenshots
 
-![Example screenshot](./screenshot.png)
+![Example screenshot](./screenshot.jpg)
 Illustrations are picked from [unDraw](https://undraw.co/)
 
 ## Technologies
