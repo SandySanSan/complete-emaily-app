@@ -28,7 +28,9 @@ class SurveyList extends Component {
                                     <label className='yellow-text text-darken-4'>
                                         Survey title
                                     </label>
-                                    <h4>{survey.title}</h4>
+                                    <h4 className='grey-text text-darken-3'>
+                                        {survey.title}
+                                    </h4>
                                 </div>
                                 <div className='col s12 m6'>
                                     <Modal
@@ -39,15 +41,41 @@ class SurveyList extends Component {
                                     />
                                 </div>
                             </div>
-                            <div className='card-content grey-text text-darken-3 col s12 l8'>
-                                <p>{survey.body}</p>
-
-                                <p className='left'>
-                                    Sent on :
-                                    {new Date(
-                                        survey.dateSent
-                                    ).toLocaleDateString()}
-                                </p>
+                            <div className='card-content grey-text text-darken-2 col s12 l8 left'>
+                                <div className='row'>
+                                    <label className='yellow-text text-darken-4'>
+                                        Survey content
+                                    </label>
+                                    <p>{survey.body}</p>
+                                </div>
+                                <div
+                                    className='row'
+                                    style={{
+                                        marginBottom: '2px',
+                                        paddingTop: '10px',
+                                        borderTop: '1px solid burlywood',
+                                    }}>
+                                    <p>
+                                        Sent on :{' '}
+                                        {new Date(
+                                            survey.dateSent
+                                        ).toLocaleDateString()}
+                                    </p>
+                                    {survey.lastResponded && (
+                                        <p>
+                                            Last responded :{' '}
+                                            {new Date(
+                                                survey.lastResponded
+                                            ).toLocaleDateString()}
+                                        </p>
+                                    )}
+                                    {(survey.yes > 0 || survey.no > 0) && (
+                                        <p>
+                                            Total feedbacks :{' '}
+                                            {survey.yes + survey.no}
+                                        </p>
+                                    )}
+                                </div>
                             </div>
                             <div
                                 className='right col s12 l4 center-align'

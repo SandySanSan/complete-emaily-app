@@ -7,6 +7,7 @@ import SurveyNew from './surveys/SurveyNew';
 import Footer from './Footer';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+// import './footer.css';
 
 class App extends Component {
     componentDidMount() {
@@ -19,7 +20,8 @@ class App extends Component {
                 <BrowserRouter>
                     <div
                         className='white'
-                        style={{ minHeight: '100vh', position: 'relative' }}>
+                        // style={{ minHeight: '100vh', position: 'relative' }}
+                    >
                         <Header />
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/surveys' component={Dashboard} />

@@ -21,7 +21,7 @@ const Dashboard = ({ auth }) => {
                 <h5 className='grey-text text-darken-2'>
                     Hi
                     <span
-                        className='blue-text text-darken-2'
+                        className='deep-purple-text text-accent-3'
                         style={{ margin: '0 10px' }}>
                         {auth && auth.name}
                     </span>

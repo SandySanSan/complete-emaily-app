@@ -4,27 +4,19 @@ const Footer = () => {
     return (
         <footer>
             <div
-                className='footer-copyright deep-purple lighten-5 valign-wrapper'
+                className='footer-copyright grey darken-3 valign-wrapper'
                 style={{
                     bottom: 0,
-                    height: '55px',
+                    height: '35px',
                     width: '100%',
-                    position: 'static',
+                    position: 'fixed',
                 }}>
-                <div className='container center-align'>
-                    <span className='grey-text text-darken-3'>
-                        2020 Developped by Sandy Prolhac
-                    </span>
-                    <a
-                        className='grey-text text-darken-3'
-                        href='#!'
-                        style={{ margin: '0 10px' }}>
+                <div className='container center-align grey-text'>
+                    <span>2020, by Sandy Prolhac</span>
+                    <a href='#!' style={{ margin: '0 10px' }}>
                         - TEST EMAILY
                     </a>
-                    <a
-                        className='grey-text text-darken-3'
-                        href='#!'
-                        style={{ margin: '0 10px' }}>
+                    <a href='#!' style={{ margin: '0 10px' }}>
                         - ABOUT EMAILY
                     </a>
                 </div>

@@ -12,7 +12,7 @@ export default function Landing() {
             />
             <h3 className='grey-text text-darken-2'>
                 - Welcome to{' '}
-                <span className='blue-text text-darken-2'>Emaily</span> -
+                <span className='deep-purple-text text-accent-3'>Emaily</span> -
             </h3>
             <h5 className='grey-text text-darken-2'>
                 Create simple surveys and collect easily feedback from your
