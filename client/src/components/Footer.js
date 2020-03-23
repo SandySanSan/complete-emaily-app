@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer>
@@ -13,9 +13,11 @@ const Footer = () => {
                 }}>
                 <div className='container center-align grey-text'>
                     <span>2020, by Sandy Prolhac</span>
-                    <a href='#!' style={{ margin: '0 10px' }}>
+                    <Link
+                        to={'/how-to-test-Emaily'}
+                        style={{ margin: '0 10px' }}>
                         - TEST EMAILY
-                    </a>
+                    </Link>
                     <a href='#!' style={{ margin: '0 10px' }}>
                         - ABOUT EMAILY
                     </a>

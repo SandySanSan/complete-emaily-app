@@ -14,7 +14,7 @@
 
 ## General info
 
-Create and send easily surveys with yes-no questions. Be informed when a user answers the question and get simple statistics on the amount of responses.
+Create and send easily surveys with yes-no questions. Be informed when a user responds to the survey and get simple statistics on the amount of responses.
 
 ## Screenshots
 

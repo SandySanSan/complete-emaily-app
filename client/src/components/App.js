@@ -7,6 +7,7 @@ import SurveyNew from './surveys/SurveyNew';
 import Footer from './Footer';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import EmailyInfoTest from './EmailyInfoTest';
 // import './footer.css';
 
 class App extends Component {
@@ -26,9 +27,14 @@ class App extends Component {
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/surveys' component={Dashboard} />
                         <Route path='/surveys/new' component={SurveyNew} />
+                        <Route
+                            exact
+                            path='/how-to-test-Emaily'
+                            component={EmailyInfoTest}
+                        />
+                        <Footer />
                     </div>
                 </BrowserRouter>
-                <Footer />
             </div>
         );
     }
