@@ -12,7 +12,8 @@ class Modal extends Component {
         return (
             <div>
                 <button
-                    className='btn-small red darken-1 modal-trigger right'
+                    className='btn-small modal-trigger right'
+                    style={{ backgroundColor: '#d37b3a' }}
                     data-target={id}>
                     <i className='material-icons right'>delete_forever</i>
                     Delete

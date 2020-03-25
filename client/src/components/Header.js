@@ -29,7 +29,7 @@ class Header extends Component {
                                 fontSize: '1.1rem',
                                 marginRight: '2.5rem',
                             }}
-                            className='deep-purple-text text-lighten-5'>
+                            className='white-text'>
                             CREDITS : {auth.credits}
                         </li>
                         <li>
@@ -38,7 +38,7 @@ class Header extends Component {
                         <li>
                             <a
                                 href='/api/logout'
-                                className='btn-flat deep-purple accent-1 white-text'>
+                                className='btn-flat indigo lighten-2 white-text'>
                                 <i className='material-icons'>
                                     power_settings_new
                                 </i>
@@ -53,11 +53,11 @@ class Header extends Component {
         const { auth } = this.props;
         return (
             <nav>
-                <div className='nav-wrapper deep-purple accent-3'>
+                <div className='nav-wrapper teal lighten-2'>
                     <div className='container'>
                         <Link
                             to={auth ? '/surveys' : '/'}
-                            className='brand-logo left deep-purple-text text-lighten-5'
+                            className='brand-logo left teal-text text-darken-3'
                             style={{ marginLeft: '0.8vw' }}>
                             Emaily
                         </Link>

@@ -1,5 +1,5 @@
 import React from 'react';
-import imgLanding from '../img/emaily-home.png';
+import imgLanding from '../img/emaily-home2.png';
 
 export default function Landing() {
     return (
@@ -12,7 +12,7 @@ export default function Landing() {
             />
             <h3 className='grey-text text-darken-2'>
                 - Welcome to{' '}
-                <span className='deep-purple-text text-accent-3'>Emaily</span> -
+                <span className='teal-text text-lighten-2'>Emaily</span> -
             </h3>
             <h5 className='grey-text text-darken-2'>
                 Create simple surveys and collect easily feedback from your

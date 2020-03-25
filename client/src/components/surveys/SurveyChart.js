@@ -7,8 +7,8 @@ const SurveyChart = ({ yes, no }) => {
         datasets: [
             {
                 data: [yes, no],
-                backgroundColor: ['#5babfe', '#ad6efe'],
-                hoverBackgroundColor: ['#84c0ff', '#bf84fe'],
+                backgroundColor: ['#61b6ad', '#7986cb'],
+                hoverBackgroundColor: ['#91d6cf', '#9bb2db'],
                 borderWidth: 1,
             },
         ],

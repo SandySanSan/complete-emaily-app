@@ -19,16 +19,20 @@ class SurveyList extends Component {
                 <div className='row' style={{ width: '85%' }}>
                     {this.props.surveys.reverse().map(survey => (
                         <div
-                            className='card yellow darken-1 col s12'
+                            className='card col s12'
+                            style={{ backgroundColor: '#fbe2ae' }}
                             key={survey._id}>
                             <div
-                                className='row yellow darken-2'
-                                style={{ padding: '10px' }}>
+                                className='row'
+                                style={{
+                                    padding: '10px',
+                                    backgroundColor: '#f3b988',
+                                }}>
                                 <div className='col s12 m6'>
                                     <label className='yellow-text text-darken-4'>
                                         Survey title
                                     </label>
-                                    <h4 className='grey-text text-darken-3'>
+                                    <h4 style={{ color: '#d37b3a' }}>
                                         {survey.title}
                                     </h4>
                                 </div>
@@ -41,16 +45,19 @@ class SurveyList extends Component {
                                     />
                                 </div>
                             </div>
-                            <div className='card-content grey-text text-darken-2 col s12 l8 left'>
-                                <div className='row'>
+                            <div className='card-content col s12 l8 left'>
+                                <div
+                                    className='row'
+                                    style={{ color: '#d37b3a' }}>
                                     <label className='yellow-text text-darken-4'>
                                         Survey content
                                     </label>
-                                    <p>{survey.body}</p>
+                                    <h5>{survey.body}</h5>
                                 </div>
                                 <div
                                     className='row'
                                     style={{
+                                        color: '#d37b3a',
                                         marginBottom: '2px',
                                         paddingTop: '10px',
                                         borderTop: '1px solid burlywood',

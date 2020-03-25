@@ -4,7 +4,9 @@ const EmailyInfoTest = () => {
     return (
         <div className='container'>
             <div>
-                <h4 style={{ padding: '25px' }} className='center'>
+                <h4
+                    style={{ padding: '25px' }}
+                    className='center teal-text text-darken-1'>
                     How to test Emaily?
                 </h4>
                 <div>
@@ -27,10 +29,11 @@ const EmailyInfoTest = () => {
                             <img src={imgStripe} alt='Stripe module' />
                         </li>
                         <li className='collection-item'>
-                            Click + at the right bottom of the screen and fill
-                            the survey form. Provide valid email(s) in the
-                            "Recipients" field to receive the survey. Your email
-                            will never be used for any other goals.
+                            Click + at the right bottom of the dashboard page
+                            and fill the survey form. Provide valid email(s),
+                            separated by comma, in the "Recipients" field to
+                            receive the survey. Your email will never be used
+                            for any other goals.
                         </li>
                     </ol>
                 </div>

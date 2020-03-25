@@ -1,5 +1,5 @@
 import React from 'react';
-import imgDashboard from '../img/dashboard-emaily.png';
+import imgDashboard from '../img/dashboard-emaily2.png';
 import SurveyList from './surveys/SurveyList';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -21,7 +21,7 @@ const Dashboard = ({ auth }) => {
                 <h5 className='grey-text text-darken-2'>
                     Hi
                     <span
-                        className='deep-purple-text text-accent-3'
+                        className='teal-text text-lighten-2'
                         style={{ margin: '0 10px' }}>
                         {auth && auth.name}
                     </span>
@@ -33,7 +33,7 @@ const Dashboard = ({ auth }) => {
             <div className='fixed-action-btn'>
                 <Link
                     to={'/surveys/new'}
-                    className='btn-floating btn-large pink accent-2 white-text '>
+                    className='btn-floating btn-large indigo lighten-2  white-text '>
                     <i className='large material-icons'>add</i>
                 </Link>
             </div>

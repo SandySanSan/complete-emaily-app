@@ -7,20 +7,25 @@ const Footer = () => {
                 className='footer-copyright grey darken-3 valign-wrapper'
                 style={{
                     bottom: 0,
-                    height: '35px',
+                    height: '50px',
                     width: '100%',
                     position: 'fixed',
                 }}>
                 <div className='container center-align grey-text'>
-                    <span>2020, by Sandy Prolhac</span>
+                    <span>2020 - Sandy Prolhac</span>
                     <Link
-                        to={'/how-to-test-Emaily'}
-                        style={{ margin: '0 10px' }}>
-                        - TEST EMAILY
+                        to={'/how-to-test-emaily'}
+                        style={{ margin: '0 10px' }}
+                        className='teal-text text-lighten-2'>
+                        TEST EMAILY
                     </Link>
-                    <a href='#!' style={{ margin: '0 10px' }}>
-                        - ABOUT EMAILY
-                    </a>
+                    <Link
+                        to={'/about-emaily'}
+                        className='teal-text text-lighten-2'
+                        style={{ margin: '0 10px' }}>
+                        {' '}
+                        ABOUT EMAILY
+                    </Link>
                 </div>
             </div>
         </footer>
