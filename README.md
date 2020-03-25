@@ -23,8 +23,6 @@ Create and send easily surveys with yes-no questions. Be informed when a user re
 ![Example screenshot](./screenshot2.png)
 ![Example screenshot](./screenshot.png)
 
-Illustrations are picked from [unDraw](https://undraw.co/)
-
 ## Technologies
 
 -   React - version 16.13.0
