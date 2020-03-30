@@ -9,7 +9,7 @@ const EmailyInfoTest = () => {
                     className='center teal-text text-darken-1'>
                     How to test Emaily?
                 </h4>
-                <div>
+                <div style={{ marginBottom: '100px' }}>
                     <ol
                         className='collection'
                         style={{ width: '75%', margin: 'auto' }}>
@@ -26,13 +26,17 @@ const EmailyInfoTest = () => {
                                 Enter any email (it doesn't need to be real) and
                                 the test number card : 4242 4242 4242 4242.
                             </p>
-                            <img src={imgStripe} alt='Stripe module' />
+                            <img
+                                src={imgStripe}
+                                alt='Stripe module'
+                                className='responsive-img'
+                            />
                         </li>
                         <li className='collection-item'>
                             Click + at the right bottom of the dashboard page
                             and fill the survey form. Provide valid email(s),
                             separated by comma, in the "Recipients" field to
-                            receive the survey. Your email will never be used
+                            receive the survey. These emails will never be used
                             for any other goals.
                         </li>
                     </ol>
