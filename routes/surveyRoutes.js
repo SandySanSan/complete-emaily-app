@@ -26,7 +26,7 @@ module.exports = app => {
             { _id: req.params.surveyId },
             (err, data) => {
                 if (err) console.log('err');
-                res.send(data._id);
+                res.status(204).send(data._id);
             }
         );
     });
