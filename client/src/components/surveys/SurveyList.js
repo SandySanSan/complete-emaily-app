@@ -17,6 +17,14 @@ class SurveyList extends Component {
         return (
             <div className='container'>
                 <div className='row' style={{ width: '85%' }}>
+                    {!this.props.surveys.length ? (
+                        <p className='center teal-text text-lighten-2'>
+                            You didn't create any survey yet. Add survey by
+                            clicking the + button.
+                        </p>
+                    ) : (
+                        ''
+                    )}
                     {this.props.surveys.reverse().map(survey => (
                         <div
                             className='card col s12'

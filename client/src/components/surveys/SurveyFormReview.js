@@ -26,7 +26,7 @@ const SurveyFormReview = ({
             await submitSurvey(formValues);
             await toggleIsSubmit();
             notifySuccess();
-            setTimeout(redirect, 4000);
+            setTimeout(redirect, 3000);
         } catch (err) {
             return notifyError(err.response.data.error);
         }
@@ -38,7 +38,7 @@ const SurveyFormReview = ({
     const notifySuccess = () => {
         toast.success('Success. Survey created and sent!', {
             position: 'top-center',
-            autoClose: 4000,
+            autoClose: 3000,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
@@ -50,7 +50,7 @@ const SurveyFormReview = ({
     const notifyError = err => {
         toast.error(err, {
             position: 'top-center',
-            autoClose: 6000,
+            autoClose: 5000,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
